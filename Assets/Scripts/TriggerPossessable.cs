@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class TriggerPossessable : MonoBehaviour
 {
-    [SerializeField] private GameObject possessable;
     private bool isCollided;
 
     // Start is called before the first frame update
@@ -19,7 +18,7 @@ public class TriggerPossessable : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.E) && isCollided)
         {
             Parameters possessParams = new Parameters();
-            possessParams.PutObjectExtra("POSSESSED_OBJECT_KEY", possessable);
+            possessParams.PutObjectExtra("POSSESSED_OBJECT_KEY", gameObject.transform.parent.gameObject);
 
             //Posting 2 events because the event with parameters is considered different from event without
             //Despite having the same event name
@@ -38,6 +37,7 @@ public class TriggerPossessable : MonoBehaviour
     {
         if(other.tag == "Ghost")
         {
+            Debug.Log("Entered");
             this.isCollided = true;
         }
     }
@@ -46,6 +46,7 @@ public class TriggerPossessable : MonoBehaviour
     {
         if(other.tag == "Ghost")
         {
+            Debug.Log("Exited");
             this.isCollided = false;
         }
     }
