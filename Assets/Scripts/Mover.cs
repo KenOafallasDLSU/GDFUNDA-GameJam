@@ -6,6 +6,7 @@ public class Mover : MonoBehaviour
 {
     [SerializeField] private GameObject defaultPlayer;
     [SerializeField] private float playerSpeed = 2.0f;
+    [SerializeField] private float smooth = 2.0f;
     private GameObject activePlayer;
     private bool isPossessing;
 
@@ -45,6 +46,10 @@ public class Mover : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftControl)){
             this.activePlayer.gameObject.transform.Translate(Vector3.down * Time.deltaTime * playerSpeed);
         }
+
+        //pans the camera to follow the mouse
+        Vector3 newRotation = new Vector3(0, Input.GetAxis("Mouse X"), 0);
+        this.activePlayer.gameObject.transform.eulerAngles += smooth * newRotation;
 
         //Depossession Behavior
         if (Input.GetKeyDown(KeyCode.Q) && isPossessing)
