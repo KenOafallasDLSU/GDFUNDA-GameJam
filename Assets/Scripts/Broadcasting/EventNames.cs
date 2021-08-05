@@ -13,29 +13,15 @@ public class EventNames {
 
 	public const string ON_PICTURE_CLICKED = "ON_PICTURE_CLICKED";
 
-
-	public class ARBluetoothEvents {
-		public const string ON_START_BLUETOOTH_DEMO = "ON_START_BLUETOOTH_DEMO";
-		public const string ON_RECEIVED_MESSAGE = "ON_RECEIVED_MESSAGE";
-	}
-
-	public class ARPhysicsEvents {
-		public const string ON_FIRST_TARGET_SCAN = "ON_FIRST_TARGET_SCAN";
-		public const string ON_FINAL_TARGET_SCAN = "ON_FINAL_TARGET_SCAN";
-	}
-
-	public class ExtendTrackEvents {
-		public const string ON_TARGET_SCAN = "ON_TARGET_SCAN";
-		public const string ON_TARGET_HIDE = "ON_TARGET_HIDE";
-		public const string ON_SHOW_ALL = "ON_SHOW_ALL";
-		public const string ON_HIDE_ALL = "ON_HIDE_ALL";
-		public const string ON_DELETE_ALL = "ON_DELETE_ALL";
-	}
-
 	public class GameJam {
 		public const string ON_POSSESSION = "ON_POSSESSION";
 		public const string ON_DEPOSSESSION = "ON_DEPOSSESSION";
-
+		public const string ON_POSSESSABLE_ENTER = "ON_POSSESSABLE_ENTER";
+		public const string ON_POSSESSABLE_EXIT = "ON_POSSESSABLE_EXIT";
+		public const string ON_ESCAPE = "ON_ESCAPE";
+		public const string ON_FIRST_LEVEL_CLEAR = "ON_FIRST_LEVEL_CLEAR";
+		public const string ON_SECOND_LEVEL_CLEAR = "ON_SECOND_LEVEL_CLEAR";
+		public const string ON_THIRD_LEVEL_CLEAR = "ON_THIRD_LEVEL_CLEAR";
 	}
 }
 
