@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ghost
   - Car
+  - Wagon
   layers:
   - Default
   - TransparentFX
