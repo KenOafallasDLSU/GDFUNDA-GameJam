@@ -9,6 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 1f575f6a7e54b431782f526c1a4d3ad8
   - enabled: 1
-    path: Assets/Prefabs/MainMenu.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: fd3c0a74e3ddd4c4f9df7de01e8fdb8f
+  - enabled: 1
+    path: Assets/Scenes/Livingroom.unity
+    guid: 910724ffcdbc1234ea1ec6a9ba29e8e5
+  - enabled: 1
+    path: Assets/Scenes/Goal.unity
+    guid: d664d001d201b4cc8b98bebc06094023
   m_configObjects: {}
