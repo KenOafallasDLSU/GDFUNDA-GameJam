@@ -38,6 +38,7 @@ public class TriggerPossessable : MonoBehaviour
         if(other.tag == "Ghost")
         {
             Debug.Log("Entered");
+            EventBroadcaster.Instance.PostEvent(EventNames.GameJam.ON_POSSESSABLE_ENTER);
             this.isCollided = true;
         }
     }
@@ -47,6 +48,7 @@ public class TriggerPossessable : MonoBehaviour
         if(other.tag == "Ghost")
         {
             Debug.Log("Exited");
+            EventBroadcaster.Instance.PostEvent(EventNames.GameJam.ON_POSSESSABLE_EXIT);
             this.isCollided = false;
         }
     }
